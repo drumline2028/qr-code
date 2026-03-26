@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+#Terroform working dir
+.terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Terraform variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Terraform plan files
+*.tfplan
+tfplan
+
+# Crash Logs
+crash.log
+crash.*.log
+
+# CLI config
+.terraformrc
+.terraform.rc
+
+# Just in case sensitive Creds
+*.json
+

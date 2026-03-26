@@ -1,0 +1,21 @@
+services:
+  m100api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: m100api:local
+    container_name: m100api
+    ports:
+      - "8080:8080"
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: "/app/creds/service-account.json"
+      GOOGLE_CLOUD_PROJECT: "m100qrcode"
+      GCS_BUCKET: "m100boosters"
+      GCS_QR_PREFIX: "media/qrcodes"
+      CORS_ALLOW_ORIGINS: "https://localtest.beltonbandboosters.com,https://wptest.beltonbandboosters.org,https://shop.beltonmarching100.com,http://localhost:3000,http://127.0.0.1:3000"
+    volumes:
+      - ../m100qrcode-99ca119c55db.json:/app/creds/service-account.json:ro
+    restart: unless-stopped
+
+
+    
