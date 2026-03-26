@@ -1,6 +1,7 @@
 # m100api
 
 FastAPI backend for Cloud Run with QR code generation and upload to:
+this has changed 502
 
 - `gs://m100boosters/media/qrcodes`
 
